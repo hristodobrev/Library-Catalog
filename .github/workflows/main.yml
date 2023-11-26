@@ -16,10 +16,10 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
-    - name: Start Backend and Frontend
-      run: npm run start
     - name: Install Test Environment
       run: npx playwright install
+    - name: Start Backend and Frontend
+      run: npm run start
     - name: Run Tests
       run: npx playwright test tests/ui.test.js
   deploy:
